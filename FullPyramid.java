@@ -13,7 +13,7 @@ public class FullPyramid {
             int starsInRow = i*2 - 1;
             for(int j = 1; j <= fullSize; j++){
                 int leftRightSpace = (fullSize - starsInRow)/2;
-                if(j <= leftRightSpace || j > fullSize - leftRightSpace){
+                if(j <= leftRightSpace || j + leftRightSpace > fullSize){
                     System.out.print(" ");
                 } else {
                     System.out.print("*");
