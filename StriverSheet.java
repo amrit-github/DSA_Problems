@@ -130,10 +130,21 @@
 // ***    ***
 // ****  ****
 // **********
+
+// 20
+// *        *
+// **      **
+// ***    ***
+// ****  ****
+// **********
+// ****  ****
+// ***    ***
+// **      **
+// *        *
 public class StriverSheet {
     public static void main(String[] args) {
         
-        print19(5);
+        print20(5);
     }
 
     static void print3(int n){
@@ -360,8 +371,33 @@ public class StriverSheet {
             System.out.println();
         }
     }
- 
-  
+    static void print20(int n){
+        int initS = 2*(n - 1);
+        for(int i = 1; i <= 2*n - 1; i++){
+            int stars = i;
+            if(i > n){
+                stars = 2*n - i;
+            }
+            for(int j = 0; j < stars; j++){
+                System.out.print("*");
+            }
+
+            for(int j = 0; j < initS; j++){
+                System.out.print(" ");
+            }
+
+            for(int j = 0; j < stars; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+            if(i < n){
+                initS -= 2;
+            }else{  
+                initS += 2;
+            }
+        }
+    }
+   
 
 
 
