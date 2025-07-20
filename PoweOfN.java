@@ -1,7 +1,7 @@
 public class PoweOfN {
 
     public static void main(String[] args) {
-        int ans = power(2, 2);
+        int ans = power(2, 11);
         System.out.println(ans);
     }
 
