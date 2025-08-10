@@ -4,7 +4,7 @@ public class FibonacciSeries {
 
     public static void main(String[] args) {
         
-        System.out.println(fib(50));
+        System.out.println(fib(8));
     }
 
     static int fib(int n){
@@ -12,11 +12,3 @@ public class FibonacciSeries {
         return fib(n-1) + fib(n-2);
     }   
 }
-
-    //   3
-    //  /  \
-    //  2   1   
-    // / \    
-    // 1  0   
-
-    // 1
