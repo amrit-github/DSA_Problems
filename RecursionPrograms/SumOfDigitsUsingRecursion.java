@@ -4,7 +4,7 @@ public class SumOfDigitsUsingRecursion {
 
     public static void main(String[] args) {
         
-        int sum = 0;
+        //int sum = 0;
         //System.out.println(sumOfDigits(sum, 9987));
         System.out.println(sumOfD(9987));
     }

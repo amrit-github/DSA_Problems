@@ -4,7 +4,7 @@ public class Print1ToNRecursively {
 
     public static void main(String[] args) {
         
-        int i = 1;
+        //int i = 1;
         //printFun(i, 5);
         printFun1(3);
     }
