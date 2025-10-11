@@ -44,30 +44,52 @@ public class LC_3 {
         System.out.println(lengthOfLongestSubstring("abcabde"));
     }
 
-        public static int lengthOfLongestSubstring(String s) {
+    public static int lengthOfLongestSubstring(String s) { //O(n)
         
-        int strLen = s.length();
-        if(strLen == 0 || strLen == 1) return strLen;
+        int n = s.length();
+        if (n == 0 || n == 1) return n;
 
         int i = 0, j = 0, longestLen = 0;
         Set<Character> charSet = new HashSet<>();
 
-        while(i < strLen && j < strLen){
-            if(!charSet.contains(s.charAt(j))){
-                charSet.add(s.charAt(j));
+        while(j < n){
+            char ch = s.charAt(j);
+            if(!charSet.contains(ch)){
+                charSet.add(ch);
+                longestLen = Math.max(longestLen, j - i + 1);
                 j++;
             }else{
-                if(j - i > longestLen) {
-                    longestLen = j - i;
-                }
-                charSet.clear();
+                charSet.remove(s.charAt(i));
                 i++;
-                j = i;
             }
-        }
-        if(j - i > longestLen) {
-            longestLen = j - i;
         }
         return longestLen;
     }
+
+    // public static int lengthOfLongestSubstring(String s) { //O(n^2)
+        
+    //     int strLen = s.length();
+    //     if(strLen == 0 || strLen == 1) return strLen;
+
+    //     int i = 0, j = 0, longestLen = 0;
+    //     Set<Character> charSet = new HashSet<>();
+
+    //     while(i < strLen && j < strLen){
+    //         if(!charSet.contains(s.charAt(j))){
+    //             charSet.add(s.charAt(j));
+    //             j++;
+    //         }else{
+    //             if(j - i > longestLen) {
+    //                 longestLen = j - i;
+    //             }
+    //             charSet.clear();
+    //             i++;
+    //             j = i;
+    //         }
+    //     }
+    //     if(j - i > longestLen) {
+    //         longestLen = j - i;
+    //     }
+    //     return longestLen;
+    // }
 }
