@@ -41,6 +41,6 @@ public class LC_104 {
         if(root == null) return 0;
         int L = getMaxDepth(root.left);
         int R = getMaxDepth(root.right);
-        return Math.max(L, R) + 1; // +1 is done to add the current node, Math.max is done to keep track of deepest node iterated till now
+        return Math.max(L, R) + 1; // +1 is done to add the current node, Math.max is done to keep track of deepest node iterated at each level till now
     }
 }
