@@ -73,4 +73,12 @@ public class LC_100 {
         traversePreOrder(root.right, list);
         return list;
     }
+
+    //Another solution
+
+    public Boolean isSameTree2(TreeNode p, TreeNode q){
+        if(p == q) return true;
+        if(p == null || q == null || p.val != q.val) return false;
+        return isSameTree2(p.left, q.left) && isSameTree2(p.right, q.right);
+    }
 }
